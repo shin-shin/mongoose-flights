@@ -1,3 +1,6 @@
+* {
+  box-sizing: border-box;
+}
 body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
@@ -5,4 +8,28 @@ body {
 
 a {
   color: #00B7FF;
+}
+tr:nth-child(even), th{
+  background-color: #d9eff8;
+}
+.btn, .datepicker-date-display, .datepicker-table td.is-selected, .timepicker-digital-display{
+  background: #00B7FF;
+
+}
+.timepicker-canvas line{
+  stroke: #00B7FF;
+}
+.timepicker-canvas-bg, .timepicker-canvas-bearing{
+  fill: #00B7FF;
+}
+.timepicker-close, .datepicker-cancel, .datepicker-clear, .datepicker-today, .datepicker-done, .datepicker-table td.is-today {
+  color: #00B7FF;
+}
+.btn:hover, .timepicker-tick.active, .timepicker-tick:hover {
+  background: #0194ce;
+} 
+input[type="text"]:not(.browser-default):focus:not([readonly]) {
+  border-bottom: 1px solid #00B7FF;
+  -webkit-box-shadow: 0 1px 0 0 #00B7FF;
+  box-shadow: 0 1px 0 0 #00B7FF;
 }

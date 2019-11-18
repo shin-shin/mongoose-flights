@@ -1,6 +1,6 @@
 {
   "name": "mongoose-flights",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "private": true,
   "scripts": {
     "start": "node ./bin/www"
@@ -11,6 +11,20 @@
     "ejs": "~2.6.1",
     "express": "~4.16.1",
     "http-errors": "~1.6.3",
+    "mongoose": "^5.7.11",
     "morgan": "~1.9.1"
-  }
+  },
+ 
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shin-shin/mongoose-flights.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/shin-shin/mongoose-flights/issues"
+  },
+  "homepage": "https://github.com/shin-shin/mongoose-flights#readme",
+  "description": ""
 }
