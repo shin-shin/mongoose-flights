@@ -28,7 +28,7 @@ tr:nth-child(even), th{
 .btn:hover, .timepicker-tick.active, .timepicker-tick:hover {
   background: #0194ce;
 } 
-input[type="text"]:not(.browser-default):focus:not([readonly]) {
+input[type="text"]:not(.browser-default):focus:not([readonly]), input[type="time"]:not(.browser-default):focus:not([readonly]), input[type="date"]:not(.browser-default):focus:not([readonly]) {
   border-bottom: 1px solid #00B7FF;
   -webkit-box-shadow: 0 1px 0 0 #00B7FF;
   box-shadow: 0 1px 0 0 #00B7FF;
