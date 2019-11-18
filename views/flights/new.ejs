@@ -23,29 +23,15 @@
             <input type="text" name="flightNo">
         </label>
         <label>Departure Date:
-            <input type="text" class="datepicker" name="departs-date">
+            <input type="date" class="datepicker" name="departs-date" placeholder="yyyy-mm-dd">
         </label>
         <label>Departure Time:
-            <input type="text" class="timepicker" name="departs-time">
+            <input type="time" class="timepicker" name="departs-time" placeholder="hh:mm">
         </label>
 
         <button class="btn waves-effect waves-light" type="submit" name="add-flight">Add Flight</button>
     </form>
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            var elems1 = document.querySelectorAll('.datepicker');
-            var options1 = {
-                format: 'yyyy-mm-dd',
-            };
-            var instances1 = M.Datepicker.init(elems1, options1);
-
-            var options2 = {
-                twelveHour: false
-            }
-            var elems2 = document.querySelectorAll('.timepicker');
-            var instances2 = M.Timepicker.init(elems2, options2);
-        });
-    </script>
+    
 
 </body>
 
