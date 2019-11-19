@@ -33,3 +33,7 @@ input[type="text"]:not(.browser-default):focus:not([readonly]), input[type="time
   -webkit-box-shadow: 0 1px 0 0 #00B7FF;
   box-shadow: 0 1px 0 0 #00B7FF;
 }
+select {
+  display: block;
+  padding-left: 0;
+}

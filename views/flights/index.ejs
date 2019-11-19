@@ -4,16 +4,20 @@
             <th>Airline</th>
             <th>Flight No.</th>
             <th>Departure Date/Time</th>
+            <th>Details</th>
         </thead>
         <tbody>
             <% flights.forEach(f => { %>
-            <% console.log(f.airline) %>
+            <% console.log(f._id) %>
             <tr>
                 <td><%= f.airline %></td>
                 <td><%= f.flightNo %></td>
                 <td><%= f.departs %></td>
+                <td><a class="btn waves-effect waves-light" href="/flights/<%= f._id %>">details</a></td>
             </tr>
             <% }) %>
         </tbody>
     </table>
 <%- include('../partials/footer') %>
+
+

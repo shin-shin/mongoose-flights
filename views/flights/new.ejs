@@ -1,21 +1,31 @@
 <%- include('../partials/header') %>
 
-    <form action="/flights" method="POST">
-        <label>Airline:
-            <input type="text" name="airline">
-        </label>
-        <label>Flight Number:
-            <input type="text" name="flightNo">
-        </label>
-        <label>Departure Date:
-            <input type="date" class="datepicker" name="departs-date" placeholder="yyyy-mm-dd">
-        </label>
-        <label>Departure Time:
-            <input type="time" class="timepicker" name="departs-time" placeholder="hh:mm">
-        </label>
+<form action="/flights" method="POST">
+    <label>Airline:
+        <input type="text" name="airline">
+    </label>
+    <label>Flight Number:
+        <input type="text" name="flightNo">
+    </label>
+    <label>Departure Date:
+        <input type="date" class="datepicker" name="departs-date" placeholder="yyyy-mm-dd">
+    </label>
+    <label>Departure Time:
+        <input type="time" class="timepicker" name="departs-time" placeholder="hh:mm">
+    </label>
+    <label>Airport of Destination:
+        <select name="airport">
+            <option value="">--select airport--</option>
+            <option value="AUS">Austin Bergstrom International Airport</option>
+            <option value="DAL">Dallas Love Field Airport</option>
+            <option value="LAX">Los Angeles International Airport</option>
+            <option value="SAN">San Diego</option>
+            <option value="SEA">Seattle, Tacoma International Airport</option>
+        </select>
+    </label>
 
-        <button class="btn waves-effect waves-light" type="submit" name="add-flight">Add Flight</button>
-    </form>
-    
+    <button class="btn waves-effect waves-light" type="submit" name="add-flight">Add Flight</button>
+</form>
 
-    <%- include('../partials/footer') %>
+
+<%- include('../partials/footer') %>

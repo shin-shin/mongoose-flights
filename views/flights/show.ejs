@@ -1,0 +1,14 @@
+<%- include('../partials/header') %>
+<main>
+    <section>
+            <p><b>Airline:</b> <%= flight.airline %></p>
+            <p><b>Flight Number:</b> <%= flight.flightNo %></p>
+            <p><b>Departs:</b> <%= flight.airport %></p>
+            <p><b>Airport of Departure:</b> <%= flight.departs %></p>
+            <p><b>Airport of Arrival:</b> <%= flight.destinations.airport %></p>
+            <p><b>Arrival:</b> <%= flight.destinations.arrival %></p>
+    </section>
+</main>
+
+
+<%- include('../partials/footer') %>
