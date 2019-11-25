@@ -3,37 +3,219 @@
 }
 body {
   padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  margin: 0;
+  font: 0.9rem "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+.red{
+  color: #ff0037;
+}
+form.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+}
+form.grid button{
+  grid-column: span 2;
+  justify-self: center;
+}
+
+article {
+  padding: 0px;
+}
+
+article#tickets div{
+  display: flex;
+}
+article#tickets p:nth-child(2){
+  margin-left:20px
 }
 
 a {
   color: #00B7FF;
 }
+#tickets, #arrival{
+  margin: 30px 0;
+  padding: 0;
+  border: 2px solid #d9eff8;
+}
+
+#tickets h2, #arrival h2{
+  margin: 0;
+  padding: 20px;
+}
+#tickets div, #arrival div{
+  margin: 0;
+  padding: 10px 20px;
+}
+#arrival div:nth-child(odd), #tickets div:nth-child(odd){
+  background-color: #d9eff8;
+  padding: 10px 20px;
+}
 tr:nth-child(even), th{
   background-color: #d9eff8;
+  padding: 10px 0;
 }
-.btn, .datepicker-date-display, .datepicker-table td.is-selected, .timepicker-digital-display{
-  background: #00B7FF;
-
+h2{
+  background-color: #d9eff8;
+  padding: 10px 0;
 }
-.timepicker-canvas line{
-  stroke: #00B7FF;
+table {
+  width: 100%;
+  border-collapse: collapse;
+  
 }
-.timepicker-canvas-bg, .timepicker-canvas-bearing{
-  fill: #00B7FF;
+th{
+  text-align:center;
+  font-size: 1.05rem;
+  /* padding: 10px 0; */
+  border: 2px solid #d9eff8;
+  border-collapse: collapse;
 }
-.timepicker-close, .datepicker-cancel, .datepicker-clear, .datepicker-today, .datepicker-done, .datepicker-table td.is-today {
-  color: #00B7FF;
+td{
+  padding: 10px; 
+  border: 2px solid #d9eff8;
+  border-collapse: collapse;
 }
-.btn:hover, .timepicker-tick.active, .timepicker-tick:hover {
-  background: #0194ce;
-} 
-input[type="text"]:not(.browser-default):focus:not([readonly]), input[type="time"]:not(.browser-default):focus:not([readonly]), input[type="date"]:not(.browser-default):focus:not([readonly]) {
-  border-bottom: 1px solid #00B7FF;
-  -webkit-box-shadow: 0 1px 0 0 #00B7FF;
-  box-shadow: 0 1px 0 0 #00B7FF;
-}
-select {
+td a{
   display: block;
-  padding-left: 0;
+  text-align: center;
+  margin:0 auto;
+}
+/* great wtite up on styleing <select> by */
+/* https://www.filamentgroup.com/lab/select-css.html */
+select {
+	display: block;
+  font: 0.9rem "Lucida Grande", Helvetica, Arial, sans-serif;
+	font-weight: 700;
+	color: #444;
+	line-height: 1.3;
+	padding: .6em 1.4em .5em .8em;
+	width: 100%;
+	max-width: 100%;
+	box-sizing: border-box;
+	margin: 0 auto 15px;
+	border: 1px solid #aaa;
+	box-shadow: 0 1px 0 1px rgba(0,0,0,.04);
+	border-radius: .5em;
+	-moz-appearance: none;
+	-webkit-appearance: none;
+	appearance: none;
+	background-color: #fff;
+	background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23007CB2%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E'),
+	  linear-gradient(to bottom, #ffffff 0%,#e5e5e5 100%);
+	background-repeat: no-repeat, repeat;
+	background-position: right .7em top 50%, 0 0;
+	background-size: .65em auto, 100%;
+}
+select::-ms-expand {
+	display: none;
+}
+select:hover {
+	border-color: #888;
+}
+select:focus {
+	border-color: #aaa;
+	box-shadow: 0 0 1px 3px rgba(59, 153, 252, .7);
+	box-shadow: 0 0 0 3px -moz-mac-focusring;
+	color: #222;
+	outline: none;
+}
+select option {
+	font-weight:normal;
+}
+
+input {
+	display: block;
+  font: 0.9rem "Lucida Grande", Helvetica, Arial, sans-serif;
+	font-weight: 700;
+	color: #444;
+	line-height: 1.3;
+	padding: .6em 1.4em .5em .8em;
+	width: 100%;
+	max-width: 100%;
+	box-sizing: border-box;
+	margin: 0 auto 15px;
+	border: 1px solid #aaa;
+	box-shadow: 0 1px 0 1px rgba(0,0,0,.04);
+	border-radius: .5em;
+	-moz-appearance: none;
+	-webkit-appearance: none;
+	appearance: none;
+	background-color: #fff;
+	background-repeat: no-repeat, repeat;
+	background-position: right .7em top 50%, 0 0;
+	background-size: .65em auto, 100%;
+}
+
+input:focus {
+  border: 1px solid #00B7FF;
+}
+button {
+  width:100%;
+}
+button, a.btn {
+  font-size: 1rem;
+  color:  #ffffff;;
+  background-color: #00B7FF;
+  border: 2px solid #00B7FF;
+  border-radius: 0.5rem;
+  padding: 0.6rem;
+  text-decoration: none;
+}
+button:hover, a.btn:hover {
+  
+  color: #00B7FF;
+  background-color: #ffffff;
+  border: 2px solid #00B7FF;
+  border-radius: 0.5rem;
+  padding: 0.6rem;
+}
+
+button.del {
+  width:3rem;
+  height:3rem;
+  margin: 0 0 0 auto;
+}
+button.del {
+  font-size: 1rem;
+  color:  #ffffff;;
+  background-color: #ff0037;
+  border: 2px solid #ff0037;
+  border-radius: 0.5rem;
+  padding: 0.6rem;
+  text-decoration: none;
+}
+button.del:hover {
+  color: #ff0037;
+  background-color: #ffffff;
+  border: 2px solid #ff0037;
+  border-radius: 0.5rem;
+  padding: 0.6rem;
+}
+
+@media only screen and (min-width: 1026px) {
+  .container {
+    display: flex;
+    justify-content: space-between;
+  }
+  #tickets{
+    width:30%;
+    margin-left:35px;
+  }
+  #arrival{
+    width:70%;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .container {
+    display: flex;
+    justify-content: space-between;
+  }
+  #tickets{
+    width:30%;
+  }
+  #arrival{
+    width:70%;
+  }
 }

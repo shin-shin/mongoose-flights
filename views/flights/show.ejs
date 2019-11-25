@@ -1,12 +1,87 @@
 <%- include('../partials/header') %>
 <main>
     <section>
+        <article id="details">
             <p><b>Airline:</b> <%= flight.airline %></p>
             <p><b>Flight Number:</b> <%= flight.flightNo %></p>
-            <p><b>Departs:</b> <%= flight.airport %></p>
-            <p><b>Airport of Departure:</b> <%= flight.departs %></p>
-            <p><b>Airport of Arrival:</b> <%= flight.destinations.airport %></p>
-            <p><b>Arrival:</b> <%= flight.destinations.arrival %></p>
+            <p><b>Departure:</b> <%= flight.departs %></p>
+            <p><b>Airport of Departure:</b> <%= flight.airport %></p>
+
+            <aside>
+                <table>
+                    <thead>
+                        <th>Add a New Destination</th>
+                        <th>Add a New Ticket</th>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <form action="/flights/<%= flight.id %>" method="POST">
+                                    <label>Airport of Destination:</label>
+                                    <select name="airport">
+                                        <option value="">--select airport--</option>
+                                        <option value="AUS">Austin Bergstrom International Airport</option>
+                                        <option value="DAL">Dallas Love Field Airport</option>
+                                        <option value="LAX">Los Angeles International Airport</option>
+                                        <option value="SAN">San Diego</option>
+                                        <option value="SEA">Seattle, Tacoma International Airport</option>
+                                    </select>
+
+                                    <label>Arrival Date:</label>
+                                    <input type="date" class="datepicker" name="arrival-date" placeholder="yyyy-mm-dd">
+
+                                    <label>Arrival Time:</label>
+                                    <input type="time" class="timepicker" name="arrival-time" placeholder="hh:mm">
+
+                                    <button type="submit">Add Flight Details</button>
+                                </form>
+
+                            </td>
+                            <td>
+                                <a class="btn" href="/flights/<%= flight.id %>/tickets/new">New&nbsp;Ticket</a>
+
+                            </td>
+                        </tr>
+                    </tbody>
+
+                </table>
+
+            </aside>
+
+        </article>
+        <div class="container">
+            <article id="arrival">
+                <h2>Destinations</h2>
+                <% if(flight.destinations.length > 0) { %>
+                <% flight.destinations.forEach( f => { %>
+                <div>
+                    <p><b>Airport of Destination:</b> <%= f.airport %></p>
+                    <p><b>Arrival on:</b> <%= f.arrival %></p>
+                </div>
+
+                <% }); %>
+
+                <% }; %>
+
+
+            </article>
+            <article id="tickets">
+                <h2>Tickets</h2>
+
+
+                <% tickets.forEach(t => { %>
+                <div>
+                    <p><b>Seat:</b> <%= t.seat %></p>
+                    <p><b>Price:</b> <%= t.price %></p>
+                    <form action="/flights/<%= flight._id %>/tickets/<%= t._id %>?_method=DELETE" method="POST" id="del"></form>
+                    <button class="del" type="submit"  name="delete" form="del">x</button>
+                </div>
+                <% }); %>
+
+
+
+            </article>
+        </div>
     </section>
 </main>
 

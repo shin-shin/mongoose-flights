@@ -1,19 +1,19 @@
 <%- include('../partials/header') %>
 
-<form action="/flights" method="POST">
-    <label>Airline:
+<form class="grid" action="/flights" method="POST">
+    <label>Airline:</label>
         <input type="text" name="airline">
-    </label>
-    <label>Flight Number:
+    
+    <label>Flight Number:</label>
         <input type="text" name="flightNo">
-    </label>
-    <label>Departure Date:
+    
+    <label>Departure Date:</label>
         <input type="date" class="datepicker" name="departs-date" placeholder="yyyy-mm-dd">
-    </label>
-    <label>Departure Time:
+    
+    <label>Departure Time:</label>
         <input type="time" class="timepicker" name="departs-time" placeholder="hh:mm">
-    </label>
-    <label>Airport of Destination:
+    
+    <label>Airport of Departure:</label>
         <select name="airport">
             <option value="">--select airport--</option>
             <option value="AUS">Austin Bergstrom International Airport</option>
@@ -22,7 +22,7 @@
             <option value="SAN">San Diego</option>
             <option value="SEA">Seattle, Tacoma International Airport</option>
         </select>
-    </label>
+    
 
     <button class="btn waves-effect waves-light" type="submit" name="add-flight">Add Flight</button>
 </form>

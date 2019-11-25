@@ -8,12 +8,11 @@
         </thead>
         <tbody>
             <% flights.forEach(f => { %>
-            <% console.log(f._id) %>
-            <tr>
+            <tr <% if (f.departs < new Date()){ %> class="red"<%  };  %></tr>
                 <td><%= f.airline %></td>
                 <td><%= f.flightNo %></td>
                 <td><%= f.departs %></td>
-                <td><a class="btn waves-effect waves-light" href="/flights/<%= f._id %>">details</a></td>
+                <td><a href="/flights/<%= f._id %>">details</a></td>
             </tr>
             <% }) %>
         </tbody>

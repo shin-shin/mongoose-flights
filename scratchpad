@@ -1,0 +1,7 @@
+
+ <% if(flight.destinations.airport && flight.destinations.arrival) { %>
+            <p><b>Airport of Arrival:</b> <%= flight.destinations.airport %></p>
+            <p><b>Arrival:</b> <%= flight.destinations.arrival %></p>
+        <% } else { %>
+
+         <% } %>
